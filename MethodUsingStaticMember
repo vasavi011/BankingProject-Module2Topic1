@@ -1,0 +1,36 @@
+package Moudle2Topic1_2;
+//create a static member of User calss and geneate Id using class Member
+public class MethodUsingStaticMember
+{
+	public static int gUserId=100;
+	private int id;
+	private String name;
+	public MethodUsingStaticMember (String nm)
+	{
+		this.id = generateUserId();
+		this.name = nm;
+	}
+	private static int generateUserId()
+	{
+		++gUserId;
+		return gUserId;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public int getId()
+	{
+		return id;
+	}
+		public static void main (String [] args)
+	{
+			MethodUsingStaticMember u = new MethodUsingStaticMember("Vasavi");
+			MethodUsingStaticMember u2 = new MethodUsingStaticMember("Rajeevi");
+
+			System.out.println(u.getId()+" "+u.getName());
+			System.out.println(u2.getId()+" "+u2.getName());
+
+			
+	}
+}
